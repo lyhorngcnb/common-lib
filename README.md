@@ -274,6 +274,53 @@ public class CustomConfig {
 - ✅ JPA auditing
 - ✅ Common configuration
 
+## Deployment & Version Management
+
+### Deploying New Versions
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
+
+**Quick deploy to local:**
+```bash
+mvn clean install
+```
+
+**Deploy to Maven repository:**
+```bash
+mvn clean deploy
+```
+
+### Version Management
+
+This library uses Semantic Versioning (MAJOR.MINOR.PATCH):
+- **1.0.0** → **1.0.1** (bug fixes)
+- **1.0.0** → **1.1.0** (new features)
+- **1.0.0** → **2.0.0** (breaking changes)
+
+Update version in `pom.xml` before deploying:
+```xml
+<version>1.0.1</version>
+```
+
+### Using Private Git Repository
+
+**Can others use your private Git library?**
+
+✅ **YES!** They need to:
+1. Clone the repository
+2. Run `mvn clean install`
+3. Use the dependency in their projects
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for complete instructions.
+
+### Adding New Features
+
+See [DEVELOPMENT_GUIDE.md](DEVELOPMENT_GUIDE.md) for:
+- How to add new utilities
+- How to add new configurations
+- Git workflow
+- Best practices
+
 ## Building the Library
 
 Build the library:
@@ -294,6 +341,14 @@ Contributions are welcome! Please ensure:
 - All tests pass
 - Code follows existing style
 - Documentation is updated
+- See DEVELOPMENT_GUIDE.md for workflow
+
+## Related Documentation
+
+- [README.md](README.md) - This file, overview
+- [USAGE_EXAMPLES.md](USAGE_EXAMPLES.md) - Detailed code examples
+- [DEVELOPMENT_GUIDE.md](DEVELOPMENT_GUIDE.md) - Adding features and development workflow
+- [DEPLOYMENT.md](DEPLOYMENT.md) - Deployment and version management
 
 ## License
 
